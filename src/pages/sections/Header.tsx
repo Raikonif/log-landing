@@ -116,7 +116,7 @@ function Header() {
               </li> */}
               <li>
                 <a
-                  href="#"
+                  href="#about"
                   className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 >
                   Quienes Somos
@@ -132,7 +132,7 @@ function Header() {
               </li> */}
               <li>
                 <a
-                  href="#"
+                  href="#contacts"
                   className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 >
                   Contáctanos

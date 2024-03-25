@@ -5,6 +5,8 @@ import HeroSection from "./sections/HeroSection";
 import LogosSection from "./sections/LogosSection";
 import NextSection from "./sections/NextSection";
 import TrustedCenter from "./sections/TrustCenterSection";
+import About from "./sections/About.";
+import Contacts from "./sections/Contacts";
 
 function Landing() {
   return (
@@ -15,6 +17,8 @@ function Landing() {
       <DescriptionSection />
       <NextSection />
       <TrustedCenter />
+      <About />
+      <Contacts/>
       <Footer />
     </div>
   );
