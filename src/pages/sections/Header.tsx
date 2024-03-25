@@ -1,6 +1,7 @@
 import { FaMoon } from "react-icons/fa";
 import { MdSunny } from "react-icons/md";
 import useDarkMode from "~/hooks/useDarkMode";
+import logoNoxun from "~/images/LooNoxun-256x300.png";
 
 function Header() {
   const { theme, setTheme } = useDarkMode();
@@ -15,7 +16,8 @@ function Header() {
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4">
           <a href="#" className="flex items-center">
             <img
-              src="https://demo.themesberg.com/landwind/images/logo.svg"
+              src={logoNoxun}
+              // src="https://demo.themesberg.com/landwind/images/logo.svg"
               className="mr-3 h-6 sm:h-9"
               alt="Landwind Logo"
             />
