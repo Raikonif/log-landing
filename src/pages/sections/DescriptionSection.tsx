@@ -3,14 +3,14 @@ function DescriptionSection() {
     <section className="bg-gray-50 dark:bg-gray-800">
       <div className="mx-auto max-w-screen-xl space-y-12 px-4 py-8 lg:space-y-20 lg:px-6 lg:py-24">
         <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-          <div className="text-gray-500 dark:text-gray-400 sm:text-lg">
+          <div className="text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              Work with tools you already use
+              Nuestros Servicios
             </h2>
             <p className="mb-8 font-light lg:text-xl">
-              Deliver great service experiences fast - without the complexity of traditional ITSM
-              solutions. Accelerate critical development work, eliminate toil, and deploy changes
-              with ease.
+              Proyectos de Carga, Verificador de Proveedores, Almacenes, Seguro de Transporte de
+              Carga, Proyectos y Eventos, Multimodal Terrestre, entre otros, consulta por nuestros
+              servicios.
             </p>
 
             <ul
@@ -31,7 +31,7 @@ function DescriptionSection() {
                   ></path>
                 </svg>
                 <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                  Continuous integration and deployment
+                  Proyectos de Carga
                 </span>
               </li>
               <li className="flex space-x-3">
@@ -48,7 +48,7 @@ function DescriptionSection() {
                   ></path>
                 </svg>
                 <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                  Development workflow
+                  Verificador de Proveedores
                 </span>
               </li>
               <li className="flex space-x-3">
@@ -65,13 +65,13 @@ function DescriptionSection() {
                   ></path>
                 </svg>
                 <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                  Knowledge management
+                  Almacenes
                 </span>
               </li>
             </ul>
             <p className="mb-8 font-light lg:text-xl">
-              Deliver great service experiences fast - without the complexity of traditional ITSM
-              solutions.
+              Entregamos un servicio de calidad, rápido y seguro, sin la complejidad de las
+              soluciones tradicionales.
             </p>
           </div>
           <img
@@ -87,7 +87,7 @@ function DescriptionSection() {
             src="https://demo.themesberg.com/landwind/images/feature-2.png"
             alt="feature image 2"
           />
-          <div className="text-gray-500 dark:text-gray-400 sm:text-lg">
+          <div className="text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
               We invest in the world’s potential
             </h2>
