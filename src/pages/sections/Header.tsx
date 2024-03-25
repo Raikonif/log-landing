@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { MdSunny } from "react-icons/md";
-import useDarkMode from "../../hooks/useDarkMode";
+import useDarkMode from "~/hooks/useDarkMode";
+
 function Header() {
   const { theme, setTheme } = useDarkMode();
 
