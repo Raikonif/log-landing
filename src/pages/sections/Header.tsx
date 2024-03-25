@@ -1,7 +1,8 @@
-import { useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { MdSunny } from "react-icons/md";
-import useDarkMode from "../../hooks/useDarkMode";
+import useDarkMode from "~/hooks/useDarkMode";
+import logoNoxun from "~/images/LooNoxun-256x300.png";
+
 function Header() {
   const { theme, setTheme } = useDarkMode();
 
@@ -15,7 +16,8 @@ function Header() {
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4">
           <a href="#" className="flex items-center">
             <img
-              src="https://demo.themesberg.com/landwind/images/logo.svg"
+              src={logoNoxun}
+              // src="https://demo.themesberg.com/landwind/images/logo.svg"
               className="mr-3 h-6 sm:h-9"
               alt="Landwind Logo"
             />
@@ -116,7 +118,7 @@ function Header() {
               </li> */}
               <li>
                 <a
-                  href="#"
+                  href="#about"
                   className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 >
                   Quienes Somos
@@ -132,7 +134,7 @@ function Header() {
               </li> */}
               <li>
                 <a
-                  href="#"
+                  href="#contacts"
                   className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 >
                   Contáctanos

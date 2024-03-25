@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-800">
       <div className="mx-auto max-w-screen-xl p-4 py-6 md:p-8 lg:p-10 lg:py-16">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+        {/* <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
           <div>
             <h3 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
               Company
@@ -133,8 +133,8 @@ function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-        <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+        </div> */}
+        {/* <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" /> */}
         <div className="text-center">
           <a
             href="#"
@@ -145,10 +145,11 @@ function Footer() {
               className="mr-3 h-6 sm:h-9"
               alt="Landwind Logo"
             />
-            Landwind
+            Logistica
           </a>
           <span className="block text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2021-2022 Landwind™. All Rights Reserved. Built with{" "}
+            © 2024 Logistica. All Rights Reserved.
+             {/* Built with{" "}
             <a
               href="#"
               target="_blank"
@@ -163,7 +164,7 @@ function Footer() {
               className="text-purple-600 hover:underline dark:text-purple-500"
             >
               Tailwind CSS
-            </a>
+            </a> */}
             .
           </span>
           <ul className="mt-5 flex justify-center space-x-5">
@@ -205,7 +206,7 @@ function Footer() {
                 </svg>
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#"
                 className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
@@ -232,7 +233,7 @@ function Footer() {
                   />
                 </svg>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

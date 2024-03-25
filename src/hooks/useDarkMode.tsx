@@ -6,6 +6,7 @@ function useDarkMode() {
   );
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
   const docElement = document.documentElement;
+
   const onWindowMatch = () => {
     localStorage.theme === "dark" || (!("theme" in localStorage) && darkQuery.matches)
       ? docElement.classList.add("dark")
