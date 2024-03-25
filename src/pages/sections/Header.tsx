@@ -1,6 +1,14 @@
-import React from "react";
-
+import { useState } from "react";
+import { FaMoon } from "react-icons/fa";
+import { MdSunny } from "react-icons/md";
+import useDarkMode from "../../hooks/useDarkMode";
 function Header() {
+  const { theme, setTheme } = useDarkMode();
+
+  const handleDarkMode = () => {
+    theme === "dark" ? setTheme("light") : setTheme("dark");
+  };
+
   return (
     <header className="fixed w-full">
       <nav className="border-gray-200 bg-white py-2.5 dark:bg-gray-900">
@@ -16,7 +24,7 @@ function Header() {
             </span>
           </a>
           <div className="flex items-center lg:order-2">
-            <div className="mr-4 mt-2 hidden sm:inline-block">
+            {/* <div className="mr-4 mt-2 hidden sm:inline-block">
               <a
                 className="github-button"
                 href="#"
@@ -28,8 +36,13 @@ function Header() {
               >
                 Star
               </a>
-            </div>
-
+            </div> */}
+            <button
+              className="rounded-full bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800 focus:outline-none sm:mr-2 lg:mr-0 lg:px-5 lg:py-2.5 dark:bg-purple-600 dark:hover:bg-purple-700"
+              onClick={() => handleDarkMode()}
+            >
+              {theme === "light" ? <FaMoon /> : <MdSunny />}
+            </button>
             {/* <a
               href="#"
               target="_blank"
