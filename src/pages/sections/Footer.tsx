@@ -1,4 +1,3 @@
-
 import logoNoxun from "~/images/LooNoxun-256x300.png";
 function Footer() {
   return (
@@ -142,16 +141,12 @@ function Footer() {
             href="#"
             className="mb-5 flex items-center justify-center text-2xl font-semibold text-gray-900 dark:text-white"
           >
-            <img
-              src={logoNoxun}
-              className="mr-3 h-6 sm:h-9"
-              alt="Landwind Logo"
-            />
-            Logistica
+            <img src={logoNoxun} className="mr-3 h-6 sm:h-9" alt="Landwind Logo" />
+            Noxun Logistica
           </a>
           <span className="block text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2024 Logistica. All Rights Reserved.
-             {/* Built with{" "}
+            © 2024 Noxun. All Rights Reserved.
+            {/* Built with{" "}
             <a
               href="#"
               target="_blank"
