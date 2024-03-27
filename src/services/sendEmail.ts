@@ -2,6 +2,7 @@ import axios from 'axios';
 
 interface EmailRequest {
   Subject: string;
+  Name: string;
   Message: string;
   EmailRequest: string;
   SystemType: string;

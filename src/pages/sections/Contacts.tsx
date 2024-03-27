@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 interface ContactFormValues {
   Subject: string;
+  Name: string;
   Message: string;
   EmailRequest: string;
   SystemType: string;
@@ -16,6 +17,7 @@ function Contacts() {
 
   const [formValues, setFormValues] = useState<ContactFormValues>({
     Subject: '',
+    Name: '',
     Message: '',
     EmailRequest: '',
     SystemType: 'Pagina Logistica',
@@ -25,6 +27,7 @@ function Contacts() {
     return () => {
       setFormValues({
         Subject: '',
+        Name: '',
         Message: '',
         EmailRequest: '',
         SystemType: 'Página Logistica',
@@ -70,10 +73,23 @@ function Contacts() {
 
             <div className="mb-6">
               <label className="block text-gray-800">
+                Nombre
+              </label>
+              <input
+                type="text"
+                className="w-full mt-2 px-3 py-2 placeholder-gray-500 bg-white border rounded-md shadow-sm focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                placeholder="Tu nombre"
+                value={formValues.Name}
+                onChange={e => setFormValues({ ...formValues, Name: e.target.value })}
+              />
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-gray-800">
                 Asunto
               </label>
               <input
-                type="email"
+                type="text"
                 className="w-full mt-2 px-3 py-2 placeholder-gray-500 bg-white border rounded-md shadow-sm focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
                 placeholder="Tu Asunto"
                 value={formValues.Subject}
