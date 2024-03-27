@@ -1,4 +1,4 @@
-import camion from '../../assets/imgs/camion.png';
+import camion from "../../assets/imgs/camion.png";
 
 function About() {
   return (
@@ -17,9 +17,6 @@ function About() {
             Con una red de agentes en los principales puertos del mundo, nos convertimos en aliados estratégicos 
             para el comercio exterior, facilitando las operaciones y asegurando la satisfacción del cliente.
           </p>
-        </div>
-        <div className="hidden lg:col-span-5 lg:mt-0 lg:flex">
-          <img src={camion} alt="hero image" />
         </div>
       </div>
     </section>
