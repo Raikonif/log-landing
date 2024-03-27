@@ -1,4 +1,4 @@
-import container_svg from "~/images/container-crane.svg";
+import container_svg from "~/images/container.jpg";
 
 function HeroSection() {
   return (
