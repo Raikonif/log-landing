@@ -3,7 +3,6 @@ import { MdSunny } from "react-icons/md";
 import useDarkMode from "~/hooks/useDarkMode";
 import logoNoxun from "~/images/LooNoxun-256x300.png";
 import { headerMenuData } from "~/constants/landing.constants";
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 function Header() {
