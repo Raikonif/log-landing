@@ -18,6 +18,9 @@ function About() {
             para el comercio exterior, facilitando las operaciones y asegurando la satisfacción del cliente.
           </p>
         </div>
+        <div className="hidden lg:col-span-5 lg:mt-0 lg:flex">
+          <img src={camion} alt="hero image" />
+        </div>
       </div>
     </section>
   );

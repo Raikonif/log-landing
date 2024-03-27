@@ -1,3 +1,5 @@
+
+import logoNoxun from "~/images/LooNoxun-256x300.png";
 function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-800">
@@ -141,7 +143,7 @@ function Footer() {
             className="mb-5 flex items-center justify-center text-2xl font-semibold text-gray-900 dark:text-white"
           >
             <img
-              src="https://demo.themesberg.com/landwind/images/logo.svg"
+              src={logoNoxun}
               className="mr-3 h-6 sm:h-9"
               alt="Landwind Logo"
             />
