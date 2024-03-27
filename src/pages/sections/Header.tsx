@@ -2,6 +2,9 @@ import { FaMoon } from "react-icons/fa";
 import { MdSunny } from "react-icons/md";
 import useDarkMode from "~/hooks/useDarkMode";
 import logoNoxun from "~/images/LooNoxun-256x300.png";
+import { headerMenuData } from "~/constants/landing.constants";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
   const { theme, setTheme } = useDarkMode();
@@ -9,6 +12,8 @@ function Header() {
   const handleDarkMode = () => {
     theme === "dark" ? setTheme("light") : setTheme("dark");
   };
+
+  const [isActive, setIsActive] = useState(0);
 
   return (
     <header className="fixed w-full">
@@ -22,25 +27,12 @@ function Header() {
               alt="Landwind Logo"
             />
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-              Logistica
+              Noxun Logística
             </span>
           </a>
           <div className="flex items-center lg:order-2">
-            {/* <div className="mr-4 mt-2 hidden sm:inline-block">
-              <a
-                className="github-button"
-                href="#"
-                target="_blank"
-                data-size="large"
-                data-icon="octicon-star"
-                data-show-count="true"
-                aria-label="Star themesberg/landwind on GitHub"
-              >
-                Star
-              </a>
-            </div> */}
             <button
-              className="rounded-full bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800 focus:outline-none sm:mr-2 lg:mr-0 lg:px-5 lg:py-2.5 dark:bg-purple-600 dark:hover:bg-purple-700"
+              className="rounded-full bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800 focus:outline-none dark:bg-purple-600 dark:hover:bg-purple-700 sm:mr-2 lg:mr-0 lg:px-5 lg:py-2.5"
               onClick={() => handleDarkMode()}
             >
               {theme === "light" ? <FaMoon /> : <MdSunny />}
@@ -55,7 +47,7 @@ function Header() {
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
@@ -91,55 +83,20 @@ function Header() {
             id="mobile-menu-2"
           >
             <ul className="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:space-x-8">
-              <li>
-                <a
-                  href="#"
-                  className="block rounded bg-purple-700 py-2 pl-3 pr-4 text-white lg:bg-transparent lg:p-0 lg:text-purple-700 dark:text-white"
-                  aria-current="page"
-                >
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
-                >
-                  Servicios
-                </a>
-              </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
-                >
-                  Marketplace
-                </a>
-              </li> */}
-              <li>
-                <a
-                  href="#about"
-                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
-                >
-                  Quienes Somos
-                </a>
-              </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
-                >
-                  Team
-                </a>
-              </li> */}
-              <li>
-                <a
-                  href="#contacts"
-                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
-                >
-                  Contáctanos
-                </a>
-              </li>
+              {headerMenuData.map((item, i) => (
+                <li key={item.id}>
+                  <a
+                    onClick={() => {
+                      setIsActive(i);
+                    }}
+                    key={item.id}
+                    href={item.link}
+                    className={`${i === isActive ? "text-purple-700 dark:text-white" : "dark:text-gray-400"} lg:dark:hover:text-white" block border-b border-gray-100 py-2 pl-3 pr-4 hover:bg-gray-50 dark:border-gray-700  dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-purple-700 lg:dark:hover:bg-transparent`}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

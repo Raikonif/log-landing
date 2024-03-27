@@ -1,4 +1,4 @@
-import DescriptionSection from "./sections/DescriptionSection";
+import Services from "./sections/Services";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import HeroSection from "./sections/HeroSection";
@@ -15,7 +15,7 @@ function Landing() {
       <Header />
       <HeroSection />
       {/* <LogosSection /> */}
-      <DescriptionSection />
+      <Services />
       {/* <Next2Section /> */}
       {/* <NextSection /> */}
       {/* <TrustedCenter /> */}
